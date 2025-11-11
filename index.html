@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LISTO Viandas - Promociones</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #FDF6E3 0%, #F5E6D3 100%);
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 30px 0;
+            background: white;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3em;
+            color: #C56C39;
+            margin-bottom: 10px;
+        }
+        
+        .tagline {
+            color: #5A5A5A;
+            font-size: 1.2em;
+        }
+        
+        .offer-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-left: 5px solid #C56C39;
+        }
+        
+        .offer-badge {
+            background: #C56C39;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .offer-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .offer-description {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .price {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #C56C39;
+        }
+        
+        .old-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 1em;
+            margin-left: 10px;
+        }
+        
+        .saving {
+            background: #4CAF50;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            margin-left: 10px;
+        }
+        
+        .cta-button {
+            display: block;
+            width: 100%;
+            background: #C56C39;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+        
+        .cta-button:hover {
+            background: #A55A2E;
+        }
+        
+        .testimonial {
+            background: #F8F4EB;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 3px solid #E8B89C;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: #C56C39;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 25px 0;
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 15px;
+        }
+        
+        .feature-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        
+        .info-section {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .contact-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .contact-button {
+            display: block;
+            background: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .contact-button.whatsapp {
+            background: #25D366;
+        }
+        
+        .contact-button.menu {
+            background: #C56C39;
+        }
+        
+        .delivery-info {
+            background: #E8F5E8;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
+            text-align: center;
+            border: 2px solid #4CAF50;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+<style type="text/css">
+.grande { font-size: 60px; }
+</style>
+<script>
+// Escribir aqui el código Javascript
+</script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">LISTO</div>
+            <div class="tagline">Viandas Saludables - Tu semana resuelta</div>
+        </div>
+
+        <!-- Oferta Principal -->
+        <div class="offer-card">
+            <div class="offer-badge">🔥 OFERTA DE LANZAMIENTO</div>
+            <div class="offer-title">15% OFF en tu primer pedido</div>
+            <div class="offer-description">
+                Probá la calidad LISTO con descuento. ¡Perfecto para primera vez!
+            </div>
+            <div class="price">
+                Precio final: $5.100 
+                <span class="old-price">$6.000</span>
+                <span class="saving">-15%</span>
+            </div>
+            <div class="offer-description">
+                <strong>Usá el código:</strong> LISTO15
+            </div>
+            <a href="https://wa.me/+5492634652628?text=¡Hola!%20Quiero%20usar%20el%2015%25%20OFF%20en%20mi%20primer%20pedido%20LISTO%20(Código:%20LISTO15)" class="cta-button">
+                🚀 QUERO MI DESCUENTO
+            </a>
+        </div>
+
+        <!-- Combo Prueba -->
+        <div class="offer-card">
+            <div class="offer-badge">🎯 COMBO PRUEBA</div>
+            <div class="offer-title">2 Viandas - Ideal para Probar</div>
+            <div class="offer-description">
+                Perfecto para conocer nuestra calidad sin comprometerte.
+            </div>
+            <div class="price">
+                $10.800 
+                <span class="old-price">$12.000</span>
+                <span class="saving">-10%</span>
+            </div>
+            <div class="offer-description">
+                <strong>Precio por vianda:</strong> $5.400
+            </div>
+            <a href="https://wa.me/+5492634652628?text=¡Hola!%20Quiero%20el%20Combo%20Prueba%20de%202%20viandas%20por%20$10.800" class="cta-button">
+                🛒 PEDIR COMBO PRUEBA
+            </a>
+        </div>
+
+        <!-- Plan Semanal -->
+        <div class="offer-card">
+            <div class="offer-badge">📅 PLAN SEMANAL</div>
+            <div class="offer-title">4 Viandas Balanceadas</div>
+            <div class="offer-description">
+                Resolvé 4 días de tu semana. Menú variado y nutritivo.
+            </div>
+            <div class="price">
+                $21.600 
+                <span class="old-price">$24.000</span>
+                <span class="saving">-10%</span>
+            </div>
+            <div class="offer-description">
+                <strong>Precio por vianda:</strong> $5.400
+            </div>
+            <a href="https://wa.me/+5492634652628?text=¡Hola!%20Quiero%20el%20Plan%20Semanal%20de%204%20viandas%20por%20$21.600" class="cta-button">
+                📋 ELEGIR PLAN SEMANAL
+            </a>
+        </div>
+
+        <!-- Pack Familiar -->
+        <div class="offer-card">
+            <div class="offer-badge">👨‍👩‍👧‍👦 PACK FAMILIAR</div>
+            <div class="offer-title">6 Viandas - Máximo Ahorro</div>
+            <div class="offer-description">
+                Ideal para familias. Mix de platos para todos los gustos.
+            </div>
+            <div class="price">
+                $30.000 
+                <span class="old-price">$36.000</span>
+                <span class="saving">-16%</span>
+            </div>
+            <div class="offer-description">
+                <strong>Precio por vianda:</strong> $5.000
+            </div>
+            <a href="https://wa.me/+5492634652628?text=¡Hola!%20Quiero%20el%20Pack%20Familiar%20de%206%20viandas%20por%20$30.000" class="cta-button">
+                👪 PEDIR PACK FAMILIAR
+            </a>
+        </div>
+
+        <!-- Info Delivery -->
+        <div class="delivery-info">
+            🚚 <strong>DELIVERY GRATIS</strong> en compras mayores a $15.000
+        </div>
+
+        <!-- Testimonios -->
+        <div class="info-section">
+            <div class="section-title">🌟 Lo que dicen nuestros clientes</div>
+            
+            <div class="testimonial">
+                <div class="testimonial-text">
+                    "Salvan mis almuerzos de oficina! La milanesa sabe como la de mamá."
+                </div>
+                <div class="testimonial-author">- María L.</div>
+            </div>
+            
+            <div class="testimonial">
+                <div class="testimonial-text">
+                    "Por fin comida sana y rica sin perder horas en la cocina. 100% recomendado."
+                </div>
+                <div class="testimonial-author">- Pedro R.</div>
+            </div>
+        </div>
+
+        <!-- Beneficios -->
+        <div class="info-section">
+            <div class="section-title">✅ ¿Por qué elegir LISTO?</div>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🥕</div>
+                    <div>Ingredientes frescos</div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⏱️</div>
+                    <div>Listo en 3 min</div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🥡</div>
+                    <div>Envases ecológicos</div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">💰</div>
+                    <div>Todos los medios de pago</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cómo Funciona -->
+        <div class="info-section">
+            <div class="section-title">🔄 ¿Cómo pedir?</div>
+            <div style="text-align: center; margin: 20px 0;">
+                <div style="margin: 15px 0;">
+                    <strong>1.</strong> Elegí tu menú o plan
+                </div>
+                <div style="margin: 15px 0;">
+                    <strong>2.</strong> Escribinos por WhatsApp
+                </div>
+                <div style="margin: 15px 0;">
+                    <strong>3.</strong> Coordinamos entrega (Lunes a Viernes)
+                </div>
+                <div style="margin: 15px 0;">
+                    <strong>4.</strong> ¡Disfrutá!
+                </div>
+            </div>
+            
+            <div class="contact-buttons">
+                <a href="https://wa.me/+5492634652628?text=¡Hola!%20Quiero%20hacer%20un%20pedido%20LISTO" class="contact-button whatsapp">
+                    📱 Pedir por WhatsApp
+                </a>
+                <a href="https://wa.me/+5492612433429?text=¡Hola!%20Tengo%20consultas%20sobre%20el%20menú%20LISTO" class="contact-button menu">
+                    👩‍🍳 Consultar Menú
+                </a>
+            </div>
+        </div>
+
+        <!-- Referidos -->
+        <div class="offer-card">
+            <div class="offer-badge">👥 TRAÉ AMIGOS</div>
+            <div class="offer-title">Ganá $500 por cada referido</div>
+            <div class="offer-description">
+                Recomendá LISTO y ambos ganan. ¡Sumá puntos para viandas gratis!
+            </div>
+            <a href="https://wa.me/+5492634652628?text=¡Hola!%20Quiero%20saber%20más%20sobre%20el%20programa%20de%20referidos" class="cta-button">
+                💰 QUIERO REFERIR
+            </a>
+        </div>
+
+        <div class="footer">
+            © 2025 LISTO Viandas - Mendoza<br>
+            🕒 Entregas: Lunes a Viernes<br>
+            💳 Aceptamos: Efectivo, Transferencia, MercadoPago, MODO
+        </div>
+    </div>
+
+
+</body></html>
